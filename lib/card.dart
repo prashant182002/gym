@@ -15,12 +15,13 @@ class ReCard extends StatelessWidget {
       )
       },
       child: Card(
+        color: Color(0xffffeedd),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children:[
-            Padding (padding:const EdgeInsets.all(10) ,child: Image(image: AssetImage(imageshow),height: 80,width: 80,)),
+            Padding (padding:const EdgeInsets.all(10) ,child: Image(image: AssetImage(imageshow),height: 100,width: 100,)),
             const SizedBox(width: 10,),
-            Text(textshow,style: const TextStyle(fontSize: 20),),
+            Text(textshow,style: const TextStyle(fontSize: 20,color: Color(0xff0a1d37)),),
           ],
         ),
       ),
