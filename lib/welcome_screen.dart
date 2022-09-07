@@ -36,7 +36,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: animation.value,
+      backgroundColor: Colors.grey,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(
@@ -62,7 +62,12 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                     ),
                     child: AnimatedTextKit(
                       animatedTexts: [
-                        TypewriterAnimatedText('Shiv - The Fitness Club',
+                        TypewriterAnimatedText('  SHIV',
+                          textStyle: TextStyle(fontSize: 30,color: Colors.black54),
+                          speed: const Duration(milliseconds: 200),
+                        ),
+                        TypewriterAnimatedText('  The Fitness Club',
+                          textStyle: TextStyle(fontSize: 20,color: Colors.black54),
                           speed: const Duration(milliseconds: 200),
                         ),
                       ],

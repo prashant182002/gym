@@ -21,7 +21,7 @@ class Splash extends State<MyHomePage>  {
         const Duration(seconds: 3),
             () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Alarm()),
+          MaterialPageRoute(builder: (context) => WelcomeScreen()),
         ));
   }
   @override
