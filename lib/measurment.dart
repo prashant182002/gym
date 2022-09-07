@@ -10,7 +10,7 @@ class MeasScreenState extends State<MeasScreen>{
     return Scaffold(
       body: Column(
         children: [
-          ReCard(textshow: 'Chest', imageshow: Image)
+          // ReCard(textshow: 'Chest', imageshow: Image)
         ],
       ),
     );

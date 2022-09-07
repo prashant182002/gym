@@ -21,7 +21,7 @@ class Splash extends State<MyHomePage>  {
         const Duration(seconds: 3),
             () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Alarm()),
+          MaterialPageRoute(builder: (context) => WelcomeScreen()),
         ));
   }
   @override
@@ -35,7 +35,8 @@ class Splash extends State<MyHomePage>  {
 class ImageInp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(title: Text('Shiv The Fitness Club'),),
       backgroundColor: Colors.white,
       body: Center(
         child: Image(

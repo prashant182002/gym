@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gym/measurment.dart';
+import 'package:gym/welcome_screen.dart';
+import 'alarm.dart';
+import 'contact.dart';
 import 'main.dart';
 import 'package:gym/registration_screen.dart';
 import 'card.dart';
@@ -17,16 +20,10 @@ class MainScreenState extends State<MainScreen>{
     Widget child=MainScreen();
     switch (_index) {
       case 0:
-        child = MainScreen();
+        child = WelcomeScreen();
         break;
       case 1:
-        child = RegistrationScreen();
-        break;
-      case 2:
-        child = RegistrationScreen();
-        break;
-      case 3:
-        child = RegistrationScreen();
+        child = Alarm();
         break;
     }
     return Scaffold(
@@ -41,7 +38,11 @@ class MainScreenState extends State<MainScreen>{
           ),
           Offstage(
             offstage: _index!=1,
-            child:TickerMode(enabled: _index==1, child:  MaterialApp(home: RegistrationScreen(),)),
+            child:TickerMode(enabled: _index==1, child:  MaterialApp(home: Alarm(),)),
+          ),
+          Offstage(
+            offstage: _index!=2,
+            child:TickerMode(enabled: _index==2, child:  MaterialApp(home: Contact(),)),
           )
         ],
       ),
@@ -49,14 +50,16 @@ class MainScreenState extends State<MainScreen>{
         onTap: (newIndex) => setState(() => _index = newIndex),
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home, color: Colors.purple,),
             label: 'Home',
-            backgroundColor: Colors.red,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-            backgroundColor: Colors.green,
+            icon: Icon(Icons.alarm, color: Colors.blue,),
+            label: 'Alarm',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.contact_mail, color: Colors.orange,),
+            label: 'Contact Us',
           ),
         ],
       ),
