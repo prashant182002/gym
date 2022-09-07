@@ -63,13 +63,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   height: 24.0,
                 ),
                 RoundedButton(title: 'Register',color: Colors.blueAccent,onPress: ()async{
+                  print(email);
                   setState((){
                     showSpinner=true;
                   });
                   try {
                     final newUser = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
-                    if(newUser!=null){
+                    if(newUser.user!=null){
                       setState((){
                         showSpinner=false;
                       });
