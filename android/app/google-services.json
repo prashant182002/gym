@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "984206550474",
+    "project_id": "thefitnessclub-e21f1",
+    "storage_bucket": "thefitnessclub-e21f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984206550474:android:efb269a10d58498f7e1b33",
+        "android_client_info": {
+          "package_name": "com.prashant.example.gym"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984206550474-v2f22pmqlqiovno8bdirbd53de56m8pq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB96W0i5LhciuxcZi6O1Qq6YsiMlurDtj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984206550474-v2f22pmqlqiovno8bdirbd53de56m8pq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
