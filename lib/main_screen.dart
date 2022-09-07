@@ -15,20 +15,6 @@ class MainScreenState extends State<MainScreen>{
   // Function child;
   Widget build(BuildContext context){
     Widget child=MainScreen();
-    switch (_index) {
-      case 0:
-        child = MainScreen();
-        break;
-      case 1:
-        child = RegistrationScreen();
-        break;
-      case 2:
-        child = RegistrationScreen();
-        break;
-      case 3:
-        child = RegistrationScreen();
-        break;
-    }
     return Scaffold(
       appBar: AppBar(
         title: const Text("Shiv The fitness Club"),
