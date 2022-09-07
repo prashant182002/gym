@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gym/welcome_screen.dart';
 import 'main_screen.dart';
+import 'package:gym/alarm.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -20,7 +21,7 @@ class Splash extends State<MyHomePage>  {
         const Duration(seconds: 3),
             () => Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => WelcomeScreen()),
+          MaterialPageRoute(builder: (context) => Alarm()),
         ));
   }
   @override
