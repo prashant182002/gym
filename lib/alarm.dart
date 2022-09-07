@@ -2,18 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
+class Alarm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Alarm Clock',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.blueGrey,
       ),
       home: MyHomePage(),
     );
@@ -26,21 +23,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-// creating text ediiting controller to take hour
-// and minute as input
   TextEditingController hourController = TextEditingController();
   TextEditingController minuteController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('GeeksForGeeks'),
+        title: Text('Alarm'),
         centerTitle: true,
       ),
       body: Center(
           child: Column(children: <Widget>[
             SizedBox(height: 30),
+            Text('Enter Time in 24 Hours', style: TextStyle(fontSize: 25),),
+            SizedBox(height: 20,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 60,
                   decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
-                      color: Colors.yellow,
+                      color: Colors.transparent,
                       borderRadius: BorderRadius.circular(11)),
                   child: Center(
                     child: TextField(
@@ -64,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: 60,
                   decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
-                      color: Colors.yellow,
+                      color: Colors.transparent,
                       borderRadius: BorderRadius.circular(11)),
                   child: Center(
                     child: TextField(
